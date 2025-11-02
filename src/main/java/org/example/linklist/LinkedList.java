@@ -33,6 +33,13 @@ public class LinkedList {
         }
     }
 
+    public void insetAtStart(int data) {
+        Node node = new Node();
+        node.data = data;
+        node.next = head;
+        head = node;
+    }
+
     public void show() {
         Node node = head;
         while (node.next!=null) {
@@ -40,5 +47,18 @@ public class LinkedList {
             node = node.next;
         }
         System.out.println(node.data);
+    }
+
+    public void insertAt(int index, int data) {
+        Node node = new Node();
+        node.data = data;
+        node.next = null;
+
+        Node n = head;
+        for (int i = 0; i < index-1; i++) {
+            n = n.next;
+        }
+        node.next = n.next;
+        n.next = node;
     }
 }
