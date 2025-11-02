@@ -11,6 +11,7 @@ public class LinkedListRunner {
         list.insert(38);
         list.insetAtStart(9);
         list.insertAt(3, 100);
+        list.deleteAt(2);
         list.show();
     }
 }
